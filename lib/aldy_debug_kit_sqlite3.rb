@@ -14,7 +14,7 @@ module AldyDebugKitSqlite3
       if !["ArInternalMetadatum"].include?(model_name)
         column_names = model_name.constantize.column_names
         rows = model_name.constantize.all
-        model = {"table_name" => table_name, "model_name" => model_name, "column_names" => column_names, "rows" => rows}
+        model = {"table_name": table_name, "model_name": model_name, "column_names": column_names, "rows": rows}
         models.push(model)
       end
     end
