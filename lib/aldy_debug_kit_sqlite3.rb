@@ -28,7 +28,7 @@ module AldyDebugKitSqlite3
         <html>
         <head>
         <meta charset="utf-8" />
-        <title>show tables</title>
+        <title>Show Tables</title>
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
@@ -44,13 +44,13 @@ module AldyDebugKitSqlite3
         <% @models.each do |model| %>
         <div class="page-header">
           <h1>
-            <%= model["table_name"] %>
-            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_<%= model["model_name"] %>" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <%= model[:table_name] %>
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_<%= model[:model_name] %>" role="button" aria-expanded="false" aria-controls="collapseExample">
             Show/Hedden
           </a>
           </h1>
         </div>
-        <div class="collapse" id="collapseExample_<%= model["model_name"] %>">
+        <div class="collapse" id="collapseExample_<%= model[:model_name] %>">
         <table class="table table-bordered table-striped table-sm">
           <thead class="thead-dark">
             <tr>
