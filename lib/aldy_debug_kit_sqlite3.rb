@@ -83,7 +83,7 @@ module AldyDebugKitSqlite3
 
     action_text = %Q{
     get '/models' do
-      @models = AldySqlite3ShowTable.getTables
+      @models = AldyDebugKitSqlite3.getTables
       erb :aldy_show_sqlite3_tables
     end
     }
