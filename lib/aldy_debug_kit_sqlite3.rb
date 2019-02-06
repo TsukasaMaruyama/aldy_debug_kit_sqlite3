@@ -54,15 +54,15 @@ module AldyDebugKitSqlite3
         <table class="table table-bordered table-striped table-sm">
           <thead class="thead-dark">
             <tr>
-            <% model["column_names"].each do |column_name|  %>
+            <% model[:column_names].each do |column_name|  %>
               <th scope="col"><%= column_name %></th>
             <% end %>
             </tr>
           </thead>
           <tbody>
-          <% model["rows"].each do |row|  %>
+          <% model[:rows].each do |row|  %>
             <tr>
-            <% model["column_names"].each do |column_name|  %>
+            <% model[:column_names].each do |column_name|  %>
               <td><%= row[column_name] %></td>
             <% end %>
             </tr>
