@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    aldy_debug_kit_sqlite3 (0.1.0)
+    aldy_debug_kit_sqlite3 (0.1.1)
 
 GEM
   remote: https://rubygems.org/
