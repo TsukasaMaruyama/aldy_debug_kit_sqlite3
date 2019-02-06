@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'aldy_debug_kit_sqlite3'
+AldyDebugKitSqlite3.setUp
