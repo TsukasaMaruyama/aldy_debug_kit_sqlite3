@@ -12,8 +12,13 @@ module AldyDebugKitSqlite3
     table_names.each do |table_name|
       model_name = table_name.classify
       if !["ArInternalMetadatum", "SchemaMigration"].include?(model_name)
-        column_names = model_name.constantize.column_names
-        rows = model_name.constantize.all
+        begin
+          model_object =  model_name.constantize
+        rescue => exception
+          next
+        end
+        column_names = model_object.column_names
+        rows = model_object.all
         model = {"table_name": table_name, "model_name": model_name, "column_names": column_names, "rows": rows}
         models.push(model)
       end
