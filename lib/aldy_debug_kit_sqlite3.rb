@@ -11,7 +11,7 @@ module AldyDebugKitSqlite3
     models = []
     table_names.each do |table_name|
       model_name = table_name.classify
-      if !["ArInternalMetadatum"].include?(model_name)
+      if !["ArInternalMetadatum", "SchemaMigration"].include?(model_name)
         column_names = model_name.constantize.column_names
         rows = model_name.constantize.all
         model = {"table_name": table_name, "model_name": model_name, "column_names": column_names, "rows": rows}
@@ -46,7 +46,7 @@ module AldyDebugKitSqlite3
           <h1>
             <%= model[:table_name] %>
             <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_<%= model[:model_name] %>" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Show/Hedden
+            Show/Hidden
           </a>
           </h1>
         </div>
